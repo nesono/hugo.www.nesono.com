@@ -1,0 +1,12 @@
+baseURL = 'http://example.org/'
+languageCode = "en-us"
+title = "nesono"
+theme = "hugo-coder"
+sectionPagesMenu = 'main'
+pygmentsStyle = "native"
+languagecode = "en"
+defaultcontentlanguage = "en"
+footercontent = "tails of life"
+
+paginate = 20
+canonifyurls = true
