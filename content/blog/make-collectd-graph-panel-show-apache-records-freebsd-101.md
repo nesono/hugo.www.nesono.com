@@ -18,7 +18,9 @@ I just patched the installation of [Collectd Graph Panel][1] to make it work tog
 
 I used the attached patch to fix it. You can simply download the patch file and run the following command in your checked out version of the Collectd Graph Panel:
 
-<pre><code class="bash">git apply collect.patch</code></pre>
+```bash
+git apply collect.patch
+```
 
 That's it again and cheers,  
 iss

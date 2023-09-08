@@ -19,9 +19,13 @@ I found the solution - surprise, surprise - in the FreeBSD [handbook][1].
 I was reluctant to believe the handbook, since it did not require me to actually provide any drive name/id.
 
 First, I had to start the ZFS service.
-<pre><code class="bash">service zfs onestart</code></pre>
+```bash
+service zfs onestart
+```
 Then, I could import the pool, even though I had to force the import since the pool was previously used by another machine (my server) without exporting it.
-<pre><code class="bash">zpool import -f</code></pre>
+```bash
+zpool import -f
+```
 
 Note that your root will be exchanged to contain the zpool contents unless you change the mount point of the pool. I didn't change it and it worked fine, but your mileage may vary.
 Just remember to change the mount point back before you reboot.

@@ -19,43 +19,61 @@ To accomplish this, I used these commands, which were neither well documented, n
 
 The following command simply converts the samplerate to 48kHz (nothing special):
 
-<pre><code class="bash">sox infile.wav -r 48k outfile.wav</code></pre>
+```bash
+sox infile.wav -r 48k outfile.wav
+```
 
 These commands split the stereo file into two mono files (left and right channel):
 
-<pre><code class="bash">sox infile.wav outfile.l.wav remix 1
-sox infile.wav outfile.r.wav remix 2</code></pre>
+```bash
+sox infile.wav outfile.l.wav remix 1
+sox infile.wav outfile.r.wav remix 2
+```
 
 The following commands create a mono mix-down of a stereo file
 
-<pre><code class="bash">sox infile.wav outfile.wav remix 1,2
-sox infile.wav outfile.wav remix 1-2</code></pre>
+```bash
+sox infile.wav outfile.wav remix 1,2
+sox infile.wav outfile.wav remix 1-2
+```
 
 The following command converts a wav file to a raw 16-bit signed integer mono file with 48kHz:
 
-<pre><code class="bash">sox infile.wav -b 16 -s -c 1 -r 48k -t raw outfile.raw</code></pre>
+```bash
+sox infile.wav -b 16 -s -c 1 -r 48k -t raw outfile.raw
+```
 
 The following command converts a raw file back to WAV (option -t raw is mandatory!):
 
-<pre><code class="bash">sox -b 16 -s -c 1 -r 48k -t raw infile.wav outfile.wav</code></pre>
+```bash
+sox -b 16 -s -c 1 -r 48k -t raw infile.wav outfile.wav
+```
 
 The following command merges the two mono files into one stereo WAV file (order: left, right):
 
-<pre><code class="bash">sox -M input.l.wav input.r.wav output.wav</code></pre>
+```bash
+sox -M input.l.wav input.r.wav output.wav
+```
 
 This command converts the 48kHz back to 44.1kHz:
 
-<pre><code class="bash">sox input.wav -r 44100 output.wav</code></pre>
+```bash
+sox input.wav -r 44100 output.wav
+```
 
 Another nice command, not too intrusively documented is the following:
 
-<pre><code class="bash">sox audiofile.wav -n stat</code></pre>
+```bash
+sox audiofile.wav -n stat
+```
 
 which allows scripts to read audio signal attributes like overall gain, mean values etc. from audio files and use them afterward e.g. for normalization, dc-offset compensation, etc.
 
 Another command for acquiring signal information is soxi:
 
-<pre><code class="bash">soxi audiofile.wav</code></pre>
+```bash
+soxi audiofile.wav
+```
 
 The main problem for me today was the flag '-t raw', which is not stated as mandatory in the sox manpage for raw file, but it actually is! Anyhow, the remaining part is pretty straight forward :)  
 

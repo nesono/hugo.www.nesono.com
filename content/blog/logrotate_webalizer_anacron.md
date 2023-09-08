@@ -21,6 +21,8 @@ After I deinstalled anacron (as it is NOT useful for always up and running machi
 
 For rebuilding the reports, I needed to concatenate all log files (in reversed order) into a big one, switch on 'Incremental' in the webalizer configuration file, set the big access.log file as the input file, remove the old data from the output directories and run webalizer with the following command on each config:
 
-<pre><code class="bash">webalizer -c /etc/webalizer/site-webalizer.conf</code></pre>
+```bash
+webalizer -c /etc/webalizer/site-webalizer.conf
+```
 
 Now the reports are refreshed and you should see positive feedback from webalizers standard output. After the update, you need to modify the LogFile entry in your site's webalizer config file to the first logrotate'd file (e.g. access.log.1), to have all webserver access included in the reports. I hope, that's it and if not, I will update this post... Cheers!

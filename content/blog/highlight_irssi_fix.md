@@ -22,10 +22,12 @@ To work around that, I am using the following steps to regain original window la
 First of all, I switch to the highlight window using the escape key.
 Then, I am invoking the following commands:
 
-<pre><code class="irc">/wc
+```irc
+/wc
 /window new split
 /window size 16
-/hilight nesono</code></pre>
+/hilight nesono
+```
 
 Do not forget to change `nesono` to your username instead.  
 Happy IRSSI'ng,  

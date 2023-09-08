@@ -21,11 +21,15 @@ No wrap around :/
 Besides that, I gave `diff( uint16() )`, which shows a serious bug.
 To reproduce: enter the following into your Matlab terminal:
 
-<pre><code class="matlab">ext_seq = diff( uint16( [65530:65535, 0:5] ) )</code></pre>
+```matlab
+ext_seq = diff( uint16( [65530:65535, 0:5] ) )
+```
 
 And you will get:
 
-<pre><code class="matlab">ans = 1 1 1 1 1 0 1 1 1 1 1</code></pre>
+```matlab
+ans = 1 1 1 1 1 0 1 1 1 1 1
+```
 
 This means, that Matlab takes care of the wrap around, just in a wrong manner.
 The same "bug" occurred for me with `uint32` and made me wonder, what Matlab is insinuating with this behavior.

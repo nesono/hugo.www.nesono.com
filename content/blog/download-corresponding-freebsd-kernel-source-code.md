@@ -11,12 +11,13 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 Today I wanted to download the right kernel source code and found [this helping blog post][1].
 However, I got the feeling that the url can be built automatically to avoid fetching the wrong URL.
 Use the following command instead and it should always fetch the appropriate sources according to your currently running machine:
 
-<pre><code class="bash">fetch ftp://ftp.freebsd.org/pub/`uname -s`/releases/`uname -m`/`uname -r`/src.txz</code></pre>
+```bash
+fetch ftp://ftp.freebsd.org/pub/`uname -s`/releases/`uname -m`/`uname -r`/src.txz
+```
 
 I hope this was at least a little helpful ;)  
 Cheers,  

@@ -17,7 +17,8 @@ Today I installed clang_complete using [Pathogen][1] (i.e., I installed it as a 
 I tried to be smart and went into the submodule's directory and invoked `make install`.
 That nicely built the *vimball* and installed itself - but whenever I tried to open a `cpp`-file I got the following error:
 
-<pre><code class="bash">"/tmp/sample.cpp" 10L, 144C
+```bash
+"/tmp/sample.cpp" 10L, 144C
 Error detected while processing function <SNR>15_ClangCompleteInit..<SNR>15_initClangCompletePython:
 line   29:
 Traceback (most recent call last):
@@ -29,18 +30,21 @@ Traceback (most recent call last):
 Exception: compatibility_check must be set before before using any other functionalities in libclang.
 line   30:
 E121: Undefined variable: l:res
-E15: Invalid expression: l:res == 0</code></pre>
+E15: Invalid expression: l:res == 0
+```
 
 The error message was caused by the fact, that vim was loading `clang_complete` twice, as it was now installed in the `bundle` directory **and** in the `plugin` directory.  
 To fix this issue, I deleted all `clang_complete` related files:
 
-<pre><code class="bash">bin/
+```bash
+bin/
 doc/clang_complete.txt
 doc/tags
 plugin/clang/
 plugin/clang_complete.vim
 plugin/libclang.py
-plugin/snippets/</code></pre>
+plugin/snippets/
+```
 
 Everything worked pretty fine from now on.  
 That's it again  

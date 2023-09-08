@@ -70,7 +70,9 @@ And on the remote side's (Ubuntu) `~/.bashrc`:
 	export LC_ALL=en_US.UTF-8
 
 Additionally, I added a ~/.screenrc on my remote host with the following line:
-<pre><code class="bash">utf8 on on</code></pre>
+```bash
+utf8 on on
+```
 
 Now, everything should run fine, even with unicode :)  
 But was that really easy?

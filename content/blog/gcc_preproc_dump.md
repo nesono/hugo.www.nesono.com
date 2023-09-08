@@ -15,7 +15,9 @@ blog categories: [ "programming", "c/c++" ]
 <!--more-->
 Today I wanted to get all macro definitions from gcc - including those defined internally. I knew it some tim ago, but forgot the command again, so I paste it in here for all of you.
 
-<pre><code class="bash">gcc -dM -E - < /dev/null | sort</code></pre>
+```bash
+gcc -dM -E - < /dev/null | sort
+```
 
 That's it and cheers,  
 iss

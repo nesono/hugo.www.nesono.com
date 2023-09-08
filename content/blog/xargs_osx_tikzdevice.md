@@ -18,14 +18,18 @@ Even though this update was actually a fix to the previously broken tikzdevice (
 I knew I needed to rebuild all `tex` files from the corresponding `R` files and so was able run a simple but awesome script that accelerated the whole process a lot.
 It boils down to the tip I got from [Munky Morgy][1], which finally made `xargs` on OS X work for me:
 
-<pre><code class="bash">find . -regex '.*/[^_].*\.R' -print0 | xargs -0 -P 16 -I {} ./_callR.sh {}</code></pre>
+```bash
+find . -regex '.*/[^_].*\.R' -print0 | xargs -0 -P 16 -I {} ./_callR.sh {}
+```
 
 This searches for all files ending with `.R` and not starting with an underscore below the current directory.
 Files starting with underscore are include or helper files in my project, so I do not want to process those.
 
 The script `_callR.sh` is simple as that:
 
-<pre><code class="bash">Rscript $1 ${1%%.R}.tex</code></pre>
+```bash
+Rscript $1 ${1%%.R}.tex
+```
 
 And in each `R` file, I use the first argument as my output file.
 What a relief - now `latexmk` should take the leap and parallelise building of the `tex` sources. ;)

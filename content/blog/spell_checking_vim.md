@@ -15,7 +15,9 @@ flattr username: [ "nesono" ]
 <!--more-->
 Yesterday, I needed to start spellchecking my latest paper and gave `:help spell` a try in vim.
 The following line made me almost completely happy:
-<pre><code class="vim">:setlocal spell spelllang=en_us</code></pre>
+```vim
+:setlocal spell spelllang=en_us
+```
 
 After that, typos were highlighted with respect to the alleged error made and suggestions are queried using `z=` for the word under the cursor or the selection in visual mode. 
 Alternatively, the word can be added to the list of accepted words by pressing `zg`.

@@ -30,17 +30,23 @@ However, I got the following error (stripped version):
 
 Thus, I installed the `filehash` package:
 
-<pre><code class="r">install.packages( 'filehash' )</code></pre>
+```r
+install.packages( 'filehash' )
+```
 
 And ran the install command for the `tikzDevice` again:
 
-<pre><code class="r">install.packages('tikzDevice', repos='http://r-forge.r-project.org')</code></pre>
+```r
+install.packages('tikzDevice', repos='http://r-forge.r-project.org')
+```
 
 That's it,  
 iss
 
 **Update:**
 Thanks to Ben, you can also use this one liner:
-<pre><code class="r">install.packages( 'tikzDevice', repos=c('http://r-forge.r-project.org',getOption("repos")) )</code></pre>
+```r
+install.packages( 'tikzDevice', repos=c('http://r-forge.r-project.org',getOption("repos")) )
+```
 
 [1]: http://cran.r-project.org/web/packages/tikzDevice/index.html "CRAN tikzDevice"

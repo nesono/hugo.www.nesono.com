@@ -11,11 +11,12 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 After I upgraded OwnCloud, I got the following error message when trying to enable the Calendar or Contacts plugins:
 
-<pre><code>cURL error 60: SSL certificate problem: unable to get local issuer certificate</code></pre>
-<!--break-->
+```console
+cURL error 60: SSL certificate problem: unable to get local issuer certificate
+```
+
 The only way to get around this was to download the zip files from the [OwnCloud App Server][1] and enable them in the GUI or using the `php occ` command.
 
 That's it again  

@@ -18,17 +18,23 @@ Therefore, I am pasting my steps here as a future reference.
 
 First of all, this is the error message I try to get rid of:
 
-<pre><code class="bash">! TeX capacity exceeded, sorry [main memory size=5000000].</code></pre>
+```bash
+! TeX capacity exceeded, sorry [main memory size=5000000].
+```
 
 It is caused by my `tikz` figures that have been created using the `tikzDevice` package for `R`.
 
 I fixed my problem using the following steps:
 
 * Open the specific `texmf.cnf` and go to line 697:  
- <pre><code class="bash">sudo vim /usr/local/texlive/2013/texmf-dist/web2c/texmf.cnf +697</code></pre>
+```bash
+sudo vim /usr/local/texlive/2013/texmf-dist/web2c/texmf.cnf +697
+```
 * Change the value `main_memory` to 9000000 (was enough for me).
 * Run fmutil helper script:  
-  <pre><code class="bash">sudo fmtutil-sys --all</code></pre>
+```bash
+sudo fmtutil-sys --all
+```
 
 After that LaTeX ran fine again.  
 That's it,  

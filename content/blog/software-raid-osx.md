@@ -41,16 +41,22 @@ Note, that this output was produced after I cleaned up some stuff.
 I had a non existent third disk for example, which was identified to be in the RAID set - the UUID was similar to the one of device `disk1s2`.
 The entry `Rebuild` was set to `manual` before I invoked:
 
-<pre><code class="bash">sudo diskutil appleRAID update AutoRebuild 1 disk4</code></pre>
+```bash
+sudo diskutil appleRAID update AutoRebuild 1 disk4
+```
 
 The fact, that `disk1s2` has the status `Spare` still bugged me.
 Hence, I removed the disk from the RAID set again using the following command:
 
-<pre><code class="bash">diskutil appleRAID remove BD91D31E-E311-4980-B756-1E9343F6CEA7 0F11E679-27C7-4F05-BA57-1C7410EC048F</code></pre>
+```bash
+diskutil appleRAID remove BD91D31E-E311-4980-B756-1E9343F6CEA7 0F11E679-27C7-4F05-BA57-1C7410EC048F
+```
 
 Then, I re-added the disk using the following command - note that you can no longer use the UUID, as the drive lost it:
 
-<pre><code class="bash">diskutil appleRAID add member disk1s2 0F11E679-27C7-4F05-BA57-1C7410EC048F</code></pre>
+```bash
+diskutil appleRAID add member disk1s2 0F11E679-27C7-4F05-BA57-1C7410EC048F
+```
 
 Now, a three hour rebuild process has been initiated, for which end I am still waiting now ;)
 

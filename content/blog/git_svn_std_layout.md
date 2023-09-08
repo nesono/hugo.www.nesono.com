@@ -25,21 +25,29 @@ Starting with the "git svn clone" command. This command knows the option -s or -
 
 To clone this project and preserve svn's tags and branches, use the following command
 
-<pre><code class="bash">git svn clone -s http://svn.example.com/test_project</code></pre>
+```bash
+git svn clone -s http://svn.example.com/test_project
+```
 
 Additionally, after some coding, I needed something like a 'svn revert' and searched for it in git. I found this <a target="_blank" href="http://bryan-murdock.blogspot.com/2007/07/git-revert-is-not-equivalent-to-svn.html">site</a>, and boom, got the solution :) The following line will reset the changes in your working files.
 
-<pre><code class="bash">git reset --hard HEAD</code></pre>
+```bash
+git reset --hard HEAD
+```
 
 **AND NOT**
 
-<pre><code class="bash">git revert HEAD</code></pre>
+```bash
+git revert HEAD
+```
 
 **which would revert your last commit - something not even possible with svn!**
 
 If you want to reset a single file only, you should use the following command:
 
-<pre><code class="bash">git checkout -- filename</code></pre>
+```bash
+git checkout -- filename
+```
 
 You can leave out the '--'. They are just in case you have a file, which has the same name as a command or option of git.
 

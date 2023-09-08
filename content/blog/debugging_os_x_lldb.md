@@ -16,7 +16,9 @@ Since I happen to forget this every once in a while and end up in trying to debu
 <!--break-->
 "Run lldb inside the xcrun enviroment:"
 
-<pre><code class="bash">xcrun lldb [binary]</code></pre>
+```bash
+xcrun lldb [binary]
+```
 
 This seems to work fine for Xcode, Unix Makefiles (gmake), as well as ninja projects (created with CMake). Cheers,  
 iss

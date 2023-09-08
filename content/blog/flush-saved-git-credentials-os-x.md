@@ -16,7 +16,9 @@ I did not find anything on the web I thought I'd paste this here for anyone else
 <!--break-->
 If you run into the same issue, you might want to erase all saved git credentials using the following command:
 
-<pre><code class="bash">git-credential-osxkeychain erase</code></pre>
+```bash
+git-credential-osxkeychain erase
+```
 
 After that, you can enter your new/old credentials again after being prompted by git.  
 That's it again,  

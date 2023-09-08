@@ -16,7 +16,9 @@ Just like in my previous [post][1] I need to jot down some useful commands for L
 
 First of all, do not forget to prepend xcrun to lldb, that makes it much more useable:
 
-<pre><code class="bash">xcrun lldb <executable></code></pre>
+```bash
+xcrun lldb <executable>
+```
 
 Depending on the task you might find those commands useful:
 

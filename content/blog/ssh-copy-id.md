@@ -16,7 +16,9 @@ flattr username: [ "nesono" ]
 As I always forget the exact syntax and am too chicken-hearted to fool around, I note down the command to add one's public key to the authorized keys on the remote machine (to login using pub/private key pair only) here.
 Use the following command (id_rsa.pub might be id_dsa.pub on your site).
 
-<pre><code class="bash">cat ~/.ssh/id_rsa.pub | ssh user@site.com "cat - >> ~/.ssh/authorized_keys"</code></pre>
+```bash
+cat ~/.ssh/id_rsa.pub | ssh user@site.com "cat - >> ~/.ssh/authorized_keys"
+```
 
 That's it,  
 iss

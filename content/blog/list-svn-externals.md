@@ -15,7 +15,9 @@ flattr username: [ "nesono" ]
 While working with unfamiliar and large svn trees I was wondering how I can get all svn externals within the source tree on the command line.
 As almost always, [stackoverflow][1] has the answer:
 
-<pre><code class="bash">svn pg svn:externals -R</code></pre>
+```bash
+svn pg svn:externals -R
+```
 
 That's it again and cheers!  
 iss

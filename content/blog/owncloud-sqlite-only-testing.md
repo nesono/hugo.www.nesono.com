@@ -21,7 +21,9 @@ Just invoke the following (given you have setup php correctly).
 
 NB: it might be wise to put the server into maintenance mode and/or stop the web server while doing the conversion.
 
-<pre><code class="bash">sudo -u www php occ db:convert-type --all-apps mysql <username> <host> <databasename></code></pre>
+```bash
+sudo -u www php occ db:convert-type --all-apps mysql <username> <host> <databasename>
+```
 
 That's it again.
 Cheers,  

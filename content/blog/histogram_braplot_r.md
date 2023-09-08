@@ -18,9 +18,13 @@ It's even easier when it comes to composing multiple graphs in one plot.
 <!--break-->
 
 Simply use the type `h` to create a stem plot:
-<pre><code class="R">plot( type='h', ... )</code></pre>
+```R
+plot( type='h', ... )
+```
 In case you want to have a barplot or histogram it's wise to use square line endings and change the line width (requires tweaking):
-<pre><code class="R">plot( type='h', lend=2, lwd=30 )</code></pre>
+```R
+plot( type='h', lend=2, lwd=30 )
+```
 
 That's it  
 iss

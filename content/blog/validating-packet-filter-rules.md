@@ -22,7 +22,9 @@ To disable it, I just have to reboot, which is possible through my providers web
 Next, I let `pfctl` parse and print the rules as it understands them.
 I use the following command to do that:
 
-<pre><code class="bash">pfctl -nvvvf /etc/pf.conf</code></pre>
+```bash
+pfctl -nvvvf /etc/pf.conf
+```
 
 Note that your packet filter configuration file might have a different name.
 Cheers,  

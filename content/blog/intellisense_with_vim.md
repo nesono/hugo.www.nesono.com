@@ -21,7 +21,9 @@ The solution described here is based on
 
 Just install the omnicppcomplete plugin in vim and call ctags.
 
-<pre><code class="bash">ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ./</code></pre>
+```bash
+ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ./
+```
 
 Invoke this call from the upmost working directory inside your project or give an appropriate path at the end of the command.
 

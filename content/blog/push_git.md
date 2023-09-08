@@ -15,7 +15,9 @@ flattr username: [ "nesono" ]
 Another reminder for myself:
 <!--break-->
 
-<pre><code class="bash">git push origin master</code></pre>
+```bash
+git push origin master
+```
 
 pushes the local branch `master` into remote repository `origin`.  
 Cheers,

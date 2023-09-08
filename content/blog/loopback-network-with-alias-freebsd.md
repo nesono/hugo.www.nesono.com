@@ -19,15 +19,21 @@ Jails networking seems to require a dedicated network and loopback aliases can n
 Follow the next paragraphs to add one loopback interface including three aliases.
 <!--break-->  
 First, create the loopback interface in `rc.conf`:
-<pre><code class="bash">cloned_interfaces="lo1"</code></pre>
+```bash
+cloned_interfaces="lo1"
+```
 
 Then, add some aliases to the loopback interface in `rc.conf`:
-<pre><code class="bash">ifconfig_lo1_alias0="inet 10.1.1.1 netmask 255.255.255.0"
+```bash
+ifconfig_lo1_alias0="inet 10.1.1.1 netmask 255.255.255.0"
 ifconfig_lo1_alias1="inet 10.1.1.2 netmask 255.255.255.0"
-ifconfig_lo1_alias1="inet 10.1.1.3 netmask 255.255.255.0"</code></pre>
+ifconfig_lo1_alias1="inet 10.1.1.3 netmask 255.255.255.0"
+```
 
 If you happen to add an alias to an already running server, you might want to avoid rebooting and therefore also invoke the following command to add the alias while keeping the system running:
-<pre><code class="bash">ifconfig lo1 alias 10.1.1.3 netmask 255.255.255.0 </code></pre>
+```bash
+ifconfig lo1 alias 10.1.1.3 netmask 255.255.255.0 
+```
 
 That's it.  
 iss

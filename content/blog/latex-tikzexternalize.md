@@ -16,18 +16,24 @@ A trick to reduce the memory usage of LaTeX (instead or in addition to increase 
 I add the following lines to my document definition:
 <!--break-->
 
-<pre><code class="tex">\usepackage{tikz}               % all my graphs and some hand tikz'd
+```tex
+\usepackage{tikz}               % all my graphs and some hand tikz'd
 \usetikzlibrary{patterns}
 \usetikzlibrary{external}
-\tikzexternalize[prefix=./]</code></pre>
+\tikzexternalize[prefix=./]
+```
 
 Note that now many packets need to be wrapped into code that disables and re-enables externalising again, e.g., the `todo` package:
 
-<pre><code class="tex">\newcommand{\xtodo}[2][]{\tikzexternaldisable\todo[#1]{#2}\tikzexternalenable}</code></pre>
+```tex
+\newcommand{\xtodo}[2][]{\tikzexternaldisable\todo[#1]{#2}\tikzexternalenable}
+```
 
 or the missing figure command of the same package:
 
-<pre><code class="tex">\newcommand{\xmissingfigure}[2][]{\tikzexternaldisable\missingfigure[#1]{#2}\tikzexternalenable}</code></pre>
+```tex
+\newcommand{\xmissingfigure}[2][]{\tikzexternaldisable\missingfigure[#1]{#2}\tikzexternalenable}
+```
 
 Due to this side effect I would only recommend to use tikzexternalize when in urgent need, i.e., the document build times are unbearable.
 

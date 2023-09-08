@@ -29,7 +29,9 @@ I tried several tools, e.g. Toast 10 Titanium, Movie Gate 2, ffmpegX, mencoder a
 The final choice was so simple, that it is almost embarrassing to note.
 But so what, it was the reason that I started this blog entry and so here it is:
 
-<pre><code class="bash">ffmpeg -i troja.ts -target pal-dvd troja.mpg</code></pre>
+```bash
+ffmpeg -i troja.ts -target pal-dvd troja.mpg
+```
 
 After that, I still had to re-quantize the video stream, but anyhow - it worked at least :)
 

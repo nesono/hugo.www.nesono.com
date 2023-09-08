@@ -18,7 +18,9 @@ Today I fixed my ubuntu 8.10 installation, where above error occured, whenever I
 
 The failure originated from the python-setuptools and the following (simple) commands fixed it cleanly:
 
-<pre><code class="bash">sudo dpkg -r python-setuptools
-sudo apt-get install python-setuptools</code></pre>
+```bash
+sudo dpkg -r python-setuptools
+sudo apt-get install python-setuptools
+```
 
 Cheers, iss

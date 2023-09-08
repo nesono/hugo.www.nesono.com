@@ -12,16 +12,21 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 I need to migrate my local svn repository to sourceforge an therefore checked the web for such experiences once again. Recently, I found this [site][1], which has a neat trick for avoiding all these padding revisions from svndumpfilter. But let's keep it chronological. Here are the steps I took:
 
 
 * Export the repository with svnadmin:  
-  <pre><code class="bash">svnadmin dump &gt; svn_export.dmp</code></pre>
+```bash
+svnadmin dump &gt; svn_export.dmp
+```
 * Filter out the paths I don't need in the new repository and drop empty revisions:  
-  <pre><code class="bash">cat svn_export.dmp | svndumpfilter --drop-empty-revs --renumber-revs include timecode4 > svn_clean_export.dmp</code></pre>
+```bash
+cat svn_export.dmp | svndumpfilter --drop-empty-revs --renumber-revs include timecode4 > svn_clean_export.dmp
+```
 * Import the dump'ed data into the existing SourceForge repository  
-  <pre><code class="bash">svnadmin load < svn_clean_export.dmp</code></pre>
+```bash
+svnadmin load < svn_clean_export.dmp
+```
 
 The two command line options for svndumpfilter basically did the job, which do not seem to be documented well.
 Anyhow, I already migrated the svn repo once I started *nesono.com* and therefore, lots of empty padding revisions remained, but now you and I should now better.

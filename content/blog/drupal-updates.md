@@ -43,7 +43,9 @@ Recently, I needed to upgrade my drupal installation and was quite surprised by 
 
 As a shortcut for steps 5 to 7.1, you can copy & paste the following line into your terminal:
 
-<pre><code class="bash">/etc/init.d/apache2 stop && rm -rf www.bup && mv www www.bup && mv drupal-6.11 www && /etc/init.d/apache2 start</code></pre>
+```bash
+/etc/init.d/apache2 stop && rm -rf www.bup && mv www www.bup && mv drupal-6.11 www && /etc/init.d/apache2 start
+```
 
 And boom! That's it.  
 Cheers, iss

@@ -21,7 +21,9 @@ Make sure, that `/usr/local/bin` is in your `PATH` variable and try `gitx --help
 
 If you want to start gitx from within Terminal inside your git repository in check-in mode, invoke
 
-<pre><code class="bash">gitx -c</code></pre>
+```bash
+gitx -c
+```
 
 More details and further information can be found in the [user manual](http://gitx.frim.nl/user_manual.html "gitx homepage") on the gitx homepage.
 

@@ -16,7 +16,9 @@ flattr username: [ "nesono" ]
 Again a nice [post][1] on stackoverflow - here's how to set the tracking or upstream branch `upstream` from remote name `origin` for a local branch `master`:
 <!--break-->
 
-<pre><code class="bash">git branch --set-upstream master origin/upstream</code></pre>
+```bash
+git branch --set-upstream master origin/upstream
+```
 
 Cheerio,  
 iss

@@ -21,16 +21,22 @@ One of the first things I wanted to install was "The R Project for Statistical C
 Anyhow, since home brew requires people to think a bit, it was not as straight forward as some MacPorts rules.
 For R, we need to have a fortran compiler installed. I did this using the following command:
 
-<pre><code class="bash">brew install gfortran</code></pre>
+```bash
+brew install gfortran
+```
 
 Brew would complain otherwise that no fortran compiler is installed and R installation would fail. 
 After that, everything is ready already and we can proceed using:
 
-<pre><code class="bash">brew install R</code></pre>
+```bash
+brew install R
+```
 
 NB! You need to run this command first if you are on a recent OS X:
 
-<pre><code class="bash">brew tap homebrew/science</code></pre>
+```bash
+brew tap homebrew/science
+```
 
 That's it - no rocket science but nice to know in advance...  
 Cheers,  

@@ -147,16 +147,22 @@ Another nice package, useful for advanced bibliography stuff is natbib, which su
 
 When writing scientific papers, one often has to deal with tons of acronyms. Apart from simply writing down these acronyms in running text, there are several things to keep track of, i.e., using short or long form of acronym, writing it in full form (long and short) at first occurrence, not introducing typos, changing a custom acronym etc. To ease this pain, the acronym package can be used to define acronyms and refer to those using keys which will be expanded to the actual acronym in short, long (at first occurrence) or whatever desired form. For example, I define some acronyms in the beginning of my document (after `\begin{document}`) like this:
 
-<pre><code class="tex">\acrodef{voip}[VoIP]{Voice over IP}
-\acrodef{mos}[MOS]{Mean Opinion Score}</code></pre>
+```tex
+\acrodef{voip}[VoIP]{Voice over IP}
+\acrodef{mos}[MOS]{Mean Opinion Score}
+```
 
 Which can then be used in  the text, e.g.:
 
-<pre><code class="tex">...was not reflected in the \ac{MOS}, leading to...</code></pre>
+```tex
+...was not reflected in the \ac{MOS}, leading to...
+```
 
 You can explicitly use the short form and long form like this:
 
-<pre><code class="tex">was not reflected in the \acs{MOS}, leading to</code></pre>
+```tex
+was not reflected in the \acs{MOS}, leading to
+```
 
 # Example LaTeX file
 
