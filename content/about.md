@@ -7,7 +7,7 @@ draft:       true
 promote:     false
 sticky:      false
 aliases:     [ node/271 ]
-menu:        [ "main-menu" ]
+menu:        "main"
 
 ---
 

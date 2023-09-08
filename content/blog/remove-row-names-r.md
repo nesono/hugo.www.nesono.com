@@ -11,14 +11,14 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 Yesterday I had to remind myself on how to remove the row names in a `data.frame`.
 Row names are usually added by filtering steps such as `subset`, etc.
-<!--break-->
 
 Assume we want to remove the row names of the `data.frame` called `data`, we can type:
 
-<pre><code class="R">rownames(data) <- c()</code></pre>
+```r
+rownames(data) <- c()
+```
 
 That's it  
 iss
