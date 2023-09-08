@@ -12,9 +12,8 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 Since CSV (comma-separated-values) files are supported by almost every statistics and/or math tool, I sticked to use the format for all my data collections.
-<!--break-->
+
 If you need further evidence, check out the (incomplete) list of natively CSV supporting applications:
 
 * [Gnu/R][1]
@@ -32,45 +31,49 @@ In the following I will show you my solution for Python.
 
 The following snippet imports the CSV module and reads a CSV file including its header and data.
 
-	import csv
-	
-	# open csv file
-	csvfile = open( "inputfile.csv", "rb" )
-	
-	# sniff into 10KB of the file to check its dialect
-	dialect = csv.Sniffer().sniff( csvfile.read( 10*1024 ) )
-	csvfile.seek(0)
-	
-	# read csv file according to dialect
-	reader = csv.reader( csvfile, dialect )
-	
-	# read header
-	header = reader.next()
-	
-	# read data into memory
-	data = [row for row in reader]
-	
-	# close input file
-	csvfile.close()
+```python
+import csv
+
+# open csv file
+csvfile = open( "inputfile.csv", "rb" )
+
+# sniff into 10KB of the file to check its dialect
+dialect = csv.Sniffer().sniff( csvfile.read( 10*1024 ) )
+csvfile.seek(0)
+
+# read csv file according to dialect
+reader = csv.reader( csvfile, dialect )
+
+# read header
+header = reader.next()
+
+# read data into memory
+data = [row for row in reader]
+
+# close input file
+csvfile.close()
+```
 
 ## Writing CSV Files with Python
 
 The following snippet writes a CSV file including its header and data.
 
-	# open output file
-	outfile = open( options.outfile, "wb" )
-	
-	# get a csv writer
-	writer = csv.writer( outfile )
-	
-	# write header
-	writer.writerow(header)
-	
-	# write data
-	[ writer.writerow(x) for x in data ]
-	
-	# close file
-	outfile.close()
+```python
+# open output file
+outfile = open( options.outfile, "wb" )
+
+# get a csv writer
+writer = csv.writer( outfile )
+
+# write header
+writer.writerow(header)
+
+# write data
+[ writer.writerow(x) for x in data ]
+
+# close file
+outfile.close()
+```
 
 That's it for now :)  
 iss

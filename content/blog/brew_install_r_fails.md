@@ -12,19 +12,22 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 I just cleaned up my home brew cellar and had problems reinstalling R.
 I got the old well-known error message:
 
-	brew install r
-	==> Downloading http://cran.r-project.org/src/base/R-2/R-2.15.1.tar.gz
-	Already downloaded: /Library/Caches/Homebrew/r-2.15.1.tar.gz
-	Error: This formula requires a fortran compiler,...
+```bash
+brew install r
+==> Downloading http://cran.r-project.org/src/base/R-2/R-2.15.1.tar.gz
+Already downloaded: /Library/Caches/Homebrew/r-2.15.1.tar.gz
+Error: This formula requires a fortran compiler,...
+```
 
 Reinstalling gfortran (which was actually installed already) did not help and so I decided to trick home brew until the problem is fixed, with the following:
 
-	export FC=`which gfortran`
-	brew install r
+```bash
+export FC=`which gfortran`
+brew install r
+```
 
 Surprise surprise, it worked! :]
 

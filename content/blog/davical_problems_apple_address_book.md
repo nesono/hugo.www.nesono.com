@@ -22,18 +22,20 @@ After some additional research, I found this [thread][2] on the DAViCal list/for
 
 First, I opened the file `/usr/share/davical/inc/DAVResource.php`, jumped to line `1641` and added the following line
 
-	case 'DAV::add-member':
-	  if ( ! $this->_is_collection ) return false;
-	  if ( isset($c->post_add_member) && $c->post_add_member === false ) return false;
-	  $reply->DAVElement( $prop, 'add-member', $reply->href(ConstructURL(DeconstructURL($this->url())).'?add-member') );
-	  break;
+```php
+case 'DAV::add-member':
+  if ( ! $this->_is_collection ) return false;
+  if ( isset($c->post_add_member) && $c->post_add_member === false ) return false;
+  $reply->DAVElement( $prop, 'add-member', $reply->href(ConstructURL(DeconstructURL($this->url())).'?add-member') );
+  break;
+```
 
 Then, you should add the following line to your `/etc/davical/calendar.example.com-conf.php`
 
-<pre><code class="php"> 
+```php 
 // post member work around for Mac 10.7.4 - patch is in /usr/share/davical/inc/DAVResource.php:1641
 $c->post_add_member = false;
-</code></pre>
+```
 
 And that's it.
 Cheers,  

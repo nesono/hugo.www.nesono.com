@@ -12,9 +12,7 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 After reading this [article][1], I decided to change my RSS feed icon as well. However, the article does not cover [Drupal][3] 7 and so I explain the necessary steps here.
-<!--break-->
 
 First, you should create your `template.php`, if [zen][2] has not created it for you, yet.
 Then, you need to decide, where to put the feed icon and how to name it.
@@ -26,12 +24,14 @@ I just changed the image path from the original [implementation][5] (`misc/feed.
 Note that if you want to use this for yourself, you need to change `nesono` in the function's name to your theme's name!
 
 
-	function nesono_feed_icon($variables) {
-	  $text = t('Subscribe to @feed-title', array('@feed-title' => $variables['title']));
-	  if ($image = theme('image', array('path' => drupal_get_path('theme', 'nesono') . '/misc/feed.png', 'width' => 16, 'height' => 16, 'alt' => $text))) {
-	    return l($image, $variables['url'], array('html' => TRUE, 'attributes' => array('class' => array('feed-icon'), 'title' => $text)));
-	  }
-	}
+```php
+function nesono_feed_icon($variables) {
+  $text = t('Subscribe to @feed-title', array('@feed-title' => $variables['title']));
+  if ($image = theme('image', array('path' => drupal_get_path('theme', 'nesono') . '/misc/feed.png', 'width' => 16, 'height' => 16, 'alt' => $text))) {
+    return l($image, $variables['url'], array('html' => TRUE, 'attributes' => array('class' => array('feed-icon'), 'title' => $text)));
+  }
+}
+```
 
 That's it again  
 Cheers,  

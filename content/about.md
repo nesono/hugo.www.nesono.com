@@ -24,18 +24,3 @@ and now we can discover the meaning of the <em>two slashes</em> ('//') to the ri
 
 but enough small minds for now. now as you know the idea behind the scenes, feel free to enjoy yourself on this website. it does not always relate to music and not always relate to the the <b>nesono</b> attitude. generally spoken: <b>nesono</b> is just my personal website ;)
 
-
-## Impressum
-
-Jochen Issing  
-Rudolstädter Str. 1  
-90491 Nürnberg  
-
-Telefon: +49 911 9279431  
-E-Mail: <a href="mailto:info[SPAMKILLER]sono.com" onclick="this.href=this.href.replace('[SPAMKILLER]','@ne')">mail</a>
-
-Internet: https://www.nesono.com
-
-Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
-
-

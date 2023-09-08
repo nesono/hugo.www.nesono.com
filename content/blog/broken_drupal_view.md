@@ -12,11 +12,9 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 Today I stumbled over a problem using Views in Drupal. I had two listing Views - one listing all blogs, the other all posts, which muddled up my whole page: 
 
 The navigation dropped to the bottom and the content was listed kind of hierarchical, but without following an obvious rule. I searched quite a while - made hundreds of queries to google, without success.
-<!--break-->
 
 > The problem was caused by a teaser of a node, which opened a table, but did not close it. 
 

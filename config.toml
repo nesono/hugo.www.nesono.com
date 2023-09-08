@@ -1,12 +1,14 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://www.nesono.com/'
 languageCode = "en-us"
 title = "nesono"
 theme = "hugo-coder"
-sectionPagesMenu = 'main'
 pygmentsStyle = "native"
 languagecode = "en"
 defaultcontentlanguage = "en"
-footercontent = "tails of life"
-
-paginate = 20
+paginate = 25
 canonifyurls = true
+author = "iss"
+info = "tales from the past"
+
+[markup.highlight]
+style = "monokai"

@@ -12,7 +12,6 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 Since my current job forces me to work on Windows most of the time, I desperately tried to get any shell/terminal on Windows shell to the same level as all other *nix shells in the 20th century.
 It turned out to be an endeavour but with a decently working bash in the end.
 
@@ -42,18 +41,21 @@ It will safe several years of your life just to stick with Cygwin and get it wor
 
 The startup batch which is shipped with Cygwin script is located in `C:\cygwin\Cygwin.bat` if you used the default location for your installation and contains the following content:
 
-<pre><code class="batch">@echo off
+```bat
+@echo off
 
 C:
 chdir C:\cygwin\bin
 
-bash --login -i</code></pre>
+bash --login -i
+```
 
 To have access to Visual Studio tools you need to create another batch script that loads the environment in Windows `cmd.exe` and then start your `mintty` session from there.
 
 I am using the following construct for Visual Studio 2010 (which also includes the Azure SDK):
 
-<pre><code class="batch">@echo off
+```bat
+@echo off
 
 echo "Loading Visual Studio environment..."
 call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
@@ -68,7 +70,8 @@ set CXX=cl
 
 echo "Starting mintty..."
 start C:\cygwin\bin\mintty.exe -i /Cygwin-Terminal.ico -
-echo "...finished! Over and out :)"</code></pre>
+echo "...finished! Over and out :)"
+```
 
 Note that I also add CC and CXX environment variables.
 I found this useful for some build systems, but may be optional and you decide to include them on your own :)

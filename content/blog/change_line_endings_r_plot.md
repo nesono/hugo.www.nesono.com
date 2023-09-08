@@ -11,11 +11,12 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 This one is extremely useful if you want to create a quick histogram or stem plot in R.
-<!--break-->
-<pre><code class="R"># makes line ends round (0) / butt (1) / square (2)
-par(las=2)</code></pre>
+
+```r
+# makes line ends round (0) / butt (1) / square (2)
+par(las=2)
+```
 
 That's it  
 iss
