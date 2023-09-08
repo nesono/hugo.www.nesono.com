@@ -11,11 +11,9 @@ flattr username: [ "nesono" ]
 
 ---
 
-<!--more-->
 Often I found myself starting an extra vimdiff session while I am actually working in another [vim][1] session. Finally, I took the time to search for a solution and I came up with the following two lines in my `.vimrc`:
-<!--break-->
 
-```vimscript
+```vim
 nnoremap &lt;leader&gt;dt :windo diffthis<cr>
 nnoremap &lt;leader&gt;do :windo diffo<cr>
 ```
