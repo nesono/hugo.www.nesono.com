@@ -3,9 +3,7 @@ title:       "About"
 type:        blog 
 date:        2010-01-02
 changed:     2012-04-11
-draft:       true
-promote:     false
-sticky:      false
+draft:       false
 aliases:     [ node/271 ]
 menu:        "main"
 
