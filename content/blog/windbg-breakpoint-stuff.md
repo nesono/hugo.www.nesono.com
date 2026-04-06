@@ -20,11 +20,11 @@ Depending on the task you might find those commands useful:
 
 | command | description              | example |
 | ------- | ------------------------ | ------- |
-| bm      | set breakpoint at symbol | bm YourApplication.exe!*Symbolname* (supports wildcards) |
-| bl      | list breakpoints         | bl      |
-| bc      | clear breakpoints        | bc * / bc 5-28 / bc 1 4 6 |
-| g       | go / run application     | g       |
-| .reload | reload application       | .reload /f |
+| `bm`      | set breakpoint at symbol | `bm YourApplication.exe!*Symbolname*` (supports wildcards) |
+| `bl`      | list breakpoints         | `bl`      |
+| `bc`      | clear breakpoints        | `bc * / bc 5-28 / bc 1 4 6` |
+| `g`       | go / run application     | `g`       |
+| `.reload` | reload application       | `.reload /f` |
 
 That's it,  
 iss

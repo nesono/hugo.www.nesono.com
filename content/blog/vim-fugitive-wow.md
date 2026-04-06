@@ -1,5 +1,5 @@
 ---
-title:       "vim-figutive, wow"
+title:       "vim-fugitive, wow"
 type:        blog
 date:        2015-08-10
 draft:       true

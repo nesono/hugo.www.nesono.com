@@ -24,11 +24,11 @@ Depending on the task you might find those commands useful:
 
 | command | description              | example |
 | ------- | ------------------------ | ------- |
-| br s -M | set breakpoint at method | br s -M *Symbolname* |
-| br l    | list breakpoints         | br l    |
-| br del  | delete breakpoints       | br del / br del 5 / br del 1.4 |
-| r       | go / run application     | r       |
-| thread until N | run application until a certain line | thread until 100 |
+| `br s -M` | set breakpoint at method | `br s -M *Symbolname*` |
+| `br l`    | list breakpoints         | `br l`    |
+| `br del`  | delete breakpoints       | `br del / br del 5 / br del 1.4` |
+| `r`       | go / run application     | `r`       |
+| `thread until N` | run application until a certain line | `thread until 100` |
 
 That's it,  
 iss
