@@ -8,10 +8,14 @@ params:
   profileMode:
     enabled: false
   disableSpecial1stPost: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  meta:
+    favicon: true
 
 pagination:
   disableAliases: false
-  pagerSize: 5
 
 menu:
   main:
@@ -23,6 +27,16 @@ menu:
       name: Blog
       url: /
       weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 50
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
 
 module:
   imports:
