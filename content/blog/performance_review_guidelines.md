@@ -2,6 +2,8 @@
 title: "Guidelines for Writing Great Self-Reviews"
 date: 2024-05-05T16:59:28+02:00
 draft: false
+ShowToc: true
+TocOpen: true
 ---
 
 by jochen issing
