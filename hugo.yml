@@ -1,7 +1,6 @@
 baseURL: 'https://www.nesono.com/'
 languageCode: "en-us"
-title: "nesono //"
-theme: "PaperMod"
+title: "nesono \""
 
 canonifyURLs: true
 
