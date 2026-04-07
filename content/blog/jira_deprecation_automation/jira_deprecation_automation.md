@@ -4,15 +4,17 @@ date: 2026-04-06T22:52:11+02:00
 draft: true
 ---
 
-
-Jira projects have the tendency to always grow out of proportion and most often
+Software projects have the tendency to always grow out of proportion and most often
 become hard to manage because of all the other tickets.
-While this automation is not a replacement for regular clean-ups and
+While this Jira automation is not a replacement for regular clean-ups and
 refinements of your tickets, it definitely helped us to keep the clutter in the
-project low. The way how we did that was to automatically deprecate tickets if
-they have not been touched / edited since more than half a year.
+project low.  
 
 <!--more-->
+
+A very common visualization of this clutter taking place can be seen in the following created vs resolved graph, taken froma real open source project.
+
+![Created vs Resolved Graph](jira_project_created_vs_resolved_diverging.png)
 
 Follow these steps to implement this neat little ticket cleanup automation.
 
