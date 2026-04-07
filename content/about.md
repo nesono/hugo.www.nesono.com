@@ -5,7 +5,7 @@ date:        2010-01-02
 changed:     2012-04-11
 draft:       false
 aliases:     [ node/271 ]
-
+disableShare: true
 ---
 
 ok then, you clicked on the _about_ menu link. so you might want to know, what this page is all about. simply spoken, _this is my personal page_ containing several things i made over the years. i just needed a nice name, representing all my stuff, while not being my family name ;)
