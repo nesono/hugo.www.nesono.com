@@ -16,6 +16,8 @@ A very common visualization of this clutter taking place can be seen in the foll
 
 ![Created vs Resolved Graph](jira_project_created_vs_resolved_diverging.png)
 
+Millions of POs and TPMs will likely be able to tell you, that this is not an observation that is limited to open source or due to sloppy engineers, it's simply one of the constant battles of project management.
+I have seen it happen over and over in the last 25+ years.
 Follow these steps to implement this neat little ticket cleanup automation.
 
 Assuming your team name is `bubbles`, in a project called `BBLS`.
