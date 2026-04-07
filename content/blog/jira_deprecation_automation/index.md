@@ -1,7 +1,6 @@
 ---
 title: "Jira Deprecation Automation"
 date: 2026-04-06T22:52:11+02:00
-draft: true
 ---
 
 Software projects have the tendency to always grow out of proportion and most often
