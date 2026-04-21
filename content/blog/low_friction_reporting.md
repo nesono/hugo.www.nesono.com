@@ -3,8 +3,6 @@ title: "Copy Confluence Page on a Schedule"
 date: 2026-04-18T21:09:38+02:00
 ---
 
-# Copy Confluence Page on a Schedule
-
 ## What
 
 We use a single Confluence page for our weekly review and our approach is intentionally simple:
